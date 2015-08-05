@@ -12,6 +12,8 @@
 		E63CC2E81B72563200B1F104 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E63CC2E61B72563200B1F104 /* Main.storyboard */; };
 		E63CC2EA1B72563200B1F104 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E63CC2E91B72563200B1F104 /* Assets.xcassets */; };
 		E63CC2ED1B72563200B1F104 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E63CC2EB1B72563200B1F104 /* LaunchScreen.storyboard */; };
+		E63CC2F51B7256A500B1F104 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63CC2F41B7256A500B1F104 /* MapKit.framework */; };
+		E63CC2F71B72579100B1F104 /* Capital.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63CC2F61B72579100B1F104 /* Capital.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		E63CC2E91B72563200B1F104 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E63CC2EC1B72563200B1F104 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E63CC2EE1B72563200B1F104 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E63CC2F41B7256A500B1F104 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E63CC2F61B72579100B1F104 /* Capital.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Capital.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E63CC2F51B7256A500B1F104 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +43,7 @@
 		E63CC2D61B72563100B1F104 = {
 			isa = PBXGroup;
 			children = (
+				E63CC2F41B7256A500B1F104 /* MapKit.framework */,
 				E63CC2E11B72563100B1F104 /* MapKit */,
 				E63CC2E01B72563100B1F104 /* Products */,
 			);
@@ -55,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				E63CC2E21B72563200B1F104 /* AppDelegate.swift */,
+				E63CC2F61B72579100B1F104 /* Capital.swift */,
 				E63CC2E41B72563200B1F104 /* ViewController.swift */,
 				E63CC2E61B72563200B1F104 /* Main.storyboard */,
 				E63CC2E91B72563200B1F104 /* Assets.xcassets */,
@@ -95,6 +102,12 @@
 				TargetAttributes = {
 					E63CC2DE1B72563100B1F104 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = F7WJD6355G;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -136,6 +149,7 @@
 			files = (
 				E63CC2E51B72563200B1F104 /* ViewController.swift in Sources */,
 				E63CC2E31B72563200B1F104 /* AppDelegate.swift in Sources */,
+				E63CC2F71B72579100B1F104 /* Capital.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,10 +260,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MapKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.MapKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -257,10 +274,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MapKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.MapKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
